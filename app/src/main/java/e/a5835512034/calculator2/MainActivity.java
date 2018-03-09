@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private double ans, t1, t2;
-    private int in1 = 0, type = 0, com = 0;
+    private int in1 = 0, type = 0, com = 1;
     private TextView tv1, goshow, datasave;
 
     @Override
@@ -140,50 +140,38 @@ public class MainActivity extends AppCompatActivity {
             t2 = Double.parseDouble(tv1.getText().toString().substring(tv1.getText().toString().lastIndexOf('+') + 1));
             ans = t1 + t2;
             goshow.setText("=" + ans);
-            if(com<=7){
-                datasave.setText(datasave.getText().toString()+"\n"+t1+"+"+t2+"="+ans);
-                com++;
-            }
-        }
-        else if (type == 2){
+            datasave.setText("data "+com+" : "+t1 + "+" + t2 + "=" + ans + "\n" + datasave.getText().toString());
+            com++;
+        } else if (type == 2) {
             t2 = Double.parseDouble(tv1.getText().toString().substring(tv1.getText().toString().lastIndexOf('-') + 1));
             ans = t1 - t2;
             goshow.setText("=" + ans);
-            if(com<=7){
-                datasave.setText(datasave.getText().toString()+"\n"+t1+"-"+t2+"="+ans);
-                com++;
-            }
-        }
-        else if (type == 3){
+            datasave.setText("data "+com+" : "+t1 + "-" + t2 + "=" + ans + "\n" + datasave.getText().toString());
+            com++;
+        } else if (type == 3) {
             t2 = Double.parseDouble(tv1.getText().toString().substring(tv1.getText().toString().lastIndexOf('X') + 1));
-            ans = t1*t2;
+            ans = t1 * t2;
             goshow.setText("=" + ans);
-            if(com<=7){
-                datasave.setText(datasave.getText().toString()+"\n"+t1+"*"+t2+"="+ans);
-                com++;
-            }
-        }
-        else if (type == 4){
+            datasave.setText("data "+com+" : "+t1 + "*" + t2 + "=" + ans + "\n" + datasave.getText().toString());
+            com++;
+        } else if (type == 4) {
             t2 = Double.parseDouble(tv1.getText().toString().substring(tv1.getText().toString().lastIndexOf('/') + 1));
-            ans = t1/t2;
+            ans = t1 / t2;
             goshow.setText("=" + ans);
-            if(com<=7){
-                datasave.setText(datasave.getText().toString()+"\n"+t1+"/"+t2+"="+ans);
-                com++;
-            }
-
+            datasave.setText("data "+com+" : "+t1 + "/" + t2 + "=" + "\n" + ans + datasave.getText().toString());
+            com++;
         }
     }
 
     public void clr(View view) {
-        in1=0;
-        type=0;
+        in1 = 0;
+        type = 0;
         tv1.setText("");
         goshow.setText("=");
     }
 
     public void clear(View view) {
-        datasave.setText("node data:");
+        datasave.setText("");
         com = 0;
     }
 }

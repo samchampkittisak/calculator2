@@ -19,15 +19,14 @@
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tw1"
+        android:background="@drawable/showcalculate"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:text=""
-        android:textSize="32sp"
-        android:gravity="center"
-        android:background="@drawable/showcalculate"
-        android:textColor="#FFFFFF"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/tw1" />
 
     <TextView
         android:id="@+id/goshow"
@@ -39,11 +38,25 @@
         app:layout_constraintTop_toBottomOf="@+id/tv1" />
 
     <TextView
-        android:id="@+id/datasave"
+        android:id="@+id/tt1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="node data:"
+        android:text="note data:"
         app:layout_constraintTop_toBottomOf="@+id/goshow" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@+id/tt1">
+
+        <TextView
+            android:id="@+id/datasave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+    </ScrollView>
+
 
     <LinearLayout
         android:id="@+id/l4"
@@ -55,33 +68,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="."
             android:background="@drawable/shape_button"
-            android:onClick="dot"/>
+            android:onClick="dot"
+            android:text="." />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="0"
             android:background="@drawable/shape_button1"
-            android:onClick="zero"/>
+            android:onClick="zero"
+            android:text="0" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="delete"
             android:background="@drawable/shape_button"
-            android:onClick="delete"/>
+            android:onClick="delete"
+            android:text="delete" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="/"
             android:background="@drawable/shape_button"
-            android:onClick="slash"/>
+            android:onClick="slash"
+            android:text="/" />
     </LinearLayout>
 
     <LinearLayout
@@ -94,33 +107,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="1"
             android:background="@drawable/shape_button1"
-            android:onClick="one"/>
+            android:onClick="one"
+            android:text="1" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="2"
             android:background="@drawable/shape_button1"
-            android:onClick="two"/>
+            android:onClick="two"
+            android:text="2" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="3"
             android:background="@drawable/shape_button1"
-            android:onClick="three"/>
+            android:onClick="three"
+            android:text="3" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="x"
             android:background="@drawable/shape_button"
-            android:onClick="cross"/>
+            android:onClick="cross"
+            android:text="x" />
     </LinearLayout>
 
     <LinearLayout
@@ -133,33 +146,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="4"
             android:background="@drawable/shape_button1"
-            android:onClick="four"/>
+            android:onClick="four"
+            android:text="4" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="5"
             android:background="@drawable/shape_button1"
-            android:onClick="five"/>
+            android:onClick="five"
+            android:text="5" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="6"
             android:background="@drawable/shape_button1"
-            android:onClick="six"/>
+            android:onClick="six"
+            android:text="6" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="-"
             android:background="@drawable/shape_button"
-            android:onClick="minus"/>
+            android:onClick="minus"
+            android:text="-" />
     </LinearLayout>
 
     <LinearLayout
@@ -173,33 +186,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="7"
             android:background="@drawable/shape_button1"
-            android:onClick="seven"/>
+            android:onClick="seven"
+            android:text="7" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="8"
             android:background="@drawable/shape_button1"
-            android:onClick="eight"/>
+            android:onClick="eight"
+            android:text="8" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="9"
             android:background="@drawable/shape_button1"
-            android:onClick="nine"/>
+            android:onClick="nine"
+            android:text="9" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="+"
             android:background="@drawable/shape_button"
-            android:onClick="add"/>
+            android:onClick="add"
+            android:text="+" />
     </LinearLayout>
 
     <LinearLayout
@@ -212,31 +225,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="="
             android:background="@drawable/shape_button"
             android:onClick="cal"
-            />
+            android:text="=" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="CLR"
             android:background="@drawable/shape_button"
             android:onClick="clr"
-            />
+            android:text="CLR" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/lcl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/l0">
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/buttonbcleardata"
+            android:onClick="clear"
             android:text="clear node data"
-            android:textColor="#FFFFFF"
-            android:onClick="clear"/>
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 
